@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://qx2fts6lm43n"]
+
+[ext_resource type="Texture2D" uid="uid://cewds7dxrich4" path="res://art/bg.png" id="1_tpw67"]
+[ext_resource type="Texture2D" uid="uid://cb3wto76pu5hi" path="res://art/grid.png" id="2_xmwr5"]
+[ext_resource type="PackedScene" uid="uid://cas1yl7eby3l7" path="res://src/Areas/AreaSeleccionable.tscn" id="3_llxfi"]
+
+[node name="Tablero3x3" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [323.0]
+metadata/_edit_vertical_guides_ = [509.0]
+
+[node name="BgCanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="fondo" type="TextureRect" parent="BgCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tpw67")
+expand_mode = 1
+
+[node name="grilla" type="TextureRect" parent="BgCanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -261.0
+offset_right = 171.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_xmwr5")
+metadata/_edit_group_ = true
+
+[node name="AreaSeleccionable0" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(76.6, 85.833)
+
+[node name="AreaSeleccionable1" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(214.2, 85.833)
+
+[node name="AreaSeleccionable2" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(354.2, 85.833)
+
+[node name="AreaSeleccionable3" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(76.6, 216.6)
+
+[node name="AreaSeleccionable4" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(214.2, 216.6)
+
+[node name="AreaSeleccionable5" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(354.2, 216.6)
+
+[node name="AreaSeleccionable6" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(76.6, 345)
+
+[node name="AreaSeleccionable7" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(214.2, 345)
+
+[node name="AreaSeleccionable8" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
+position = Vector2(354.2, 345)

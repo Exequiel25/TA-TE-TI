@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cas1yl7eby3l7"]
+
+[ext_resource type="Script" path="res://src/Areas/AreaSeleccionable.gd" id="1_hsvhd"]
+[ext_resource type="Texture2D" uid="uid://dj44g6taw4ma0" path="res://art/x_sombra.png" id="2_8k1gv"]
+[ext_resource type="Texture2D" uid="uid://dbqtw63juuxkh" path="res://art/x.png" id="3_xqs8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgejp"]
+size = Vector2(86.6667, 86.6667)
+
+[node name="AreaSeleccionable" type="Area2D"]
+scale = Vector2(1.1, 1.1)
+script = ExtResource("1_hsvhd")
+metadata/_edit_group_ = true
+
+[node name="sombra" type="Sprite2D" parent="."]
+texture = ExtResource("2_8k1gv")
+
+[node name="x_o" type="Sprite2D" parent="."]
+texture = ExtResource("3_xqs8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.24176e-06, 1.58946e-06)
+shape = SubResource("RectangleShape2D_wgejp")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
