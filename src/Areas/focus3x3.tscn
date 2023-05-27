@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://culltffopxhcb"]
+
+[ext_resource type="Texture2D" uid="uid://b744d65w2w4ng" path="res://art/mask.png" id="1_pp7gd"]
+[ext_resource type="Texture2D" uid="uid://tialb5cqd607" path="res://art/mask_border.png" id="2_4knng"]
+
+[node name="Focus3x3" type="Node2D"]
+light_mask = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+light_mask = 2
+texture = ExtResource("1_pp7gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="PointLight2D"]
+light_mask = 2
+texture = ExtResource("2_4knng")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

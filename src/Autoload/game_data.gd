@@ -6,8 +6,10 @@ extends Node
 @onready var o_sombra = preload("res://art/o_sombra.png")
 
 var turn: bool = true	# True is for 'x' and False is for 'o'
-
 var win: bool = false
+
+var x_score: int = 0
+var o_score: int = 0
 
 # 0 is for empty, 1 is for 'x' and 2 is for 'o'
 var board = [[0,0,0],[0,0,0],[0,0,0]]
@@ -42,5 +44,15 @@ func check_win():
 
 func play(pos):
 	board[pos/3][pos%3] = 1 if turn else 2
-	turn = not turn
 	win = check_win()
+	if win:
+		player_won()
+
+func player_won():
+	if turn:
+		x_score += 1
+	else:
+		o_score += 1
+	reset_board()
+	turn = not turn
+	win = false
