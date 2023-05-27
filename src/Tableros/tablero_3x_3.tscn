@@ -38,27 +38,36 @@ metadata/_edit_group_ = true
 
 [node name="AreaSeleccionable0" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(76.6, 85.833)
+pos = 0
 
 [node name="AreaSeleccionable1" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(214.2, 85.833)
+pos = 1
 
 [node name="AreaSeleccionable2" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(354.2, 85.833)
+pos = 2
 
 [node name="AreaSeleccionable3" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(76.6, 216.6)
+pos = 3
 
 [node name="AreaSeleccionable4" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(214.2, 216.6)
+pos = 4
 
 [node name="AreaSeleccionable5" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(354.2, 216.6)
+pos = 5
 
 [node name="AreaSeleccionable6" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(76.6, 345)
+pos = 6
 
 [node name="AreaSeleccionable7" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(214.2, 345)
+pos = 7
 
 [node name="AreaSeleccionable8" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(354.2, 345)
+pos = 8

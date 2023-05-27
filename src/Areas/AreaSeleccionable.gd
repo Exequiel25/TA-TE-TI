@@ -5,6 +5,8 @@ extends Area2D
 @onready var x_sombra = preload("res://art/x_sombra.png")
 @onready var o_sombra = preload("res://art/o_sombra.png")
 
+@export var pos: int = -1
+
 var selected = false
 
 # Called when the node enters the scene tree for the first time.
@@ -34,5 +36,5 @@ func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
 			selected = true
 			$sombra.hide()
 			$x_o.show()
-			GameData.turn = not GameData.turn
+			GameData.play(pos)
 			return true
