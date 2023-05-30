@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://bolceheq0x5nv"]
+
+[ext_resource type="PackedScene" uid="uid://salp2t7i40n5" path="res://src/UI/titulo.tscn" id="1_88qjo"]
+[ext_resource type="PackedScene" uid="uid://b2r0xf3ny82uu" path="res://src/UI/continuar_buton.tscn" id="2_7nxxr"]
+[ext_resource type="PackedScene" uid="uid://dryeddiabmtlg" path="res://src/UI/cambiar_escena_boton.tscn" id="3_3stu1"]
+[ext_resource type="PackedScene" path="res://src/UI/salir_boton.tscn" id="3_lli70"]
+
+[node name="PantallaFinalPartida" type="CanvasLayer"]
+process_mode = 3
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sombreado" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.235294)
+
+[node name="Titulo" parent="Control/Sombreado" instance=ExtResource("1_88qjo")]
+layout_mode = 1
+offset_left = -151.5
+offset_top = 61.0
+offset_right = 151.5
+offset_bottom = 161.0
+text = "ronda terminada"
+autowrap_mode = 2
+
+[node name="Menu" type="VBoxContainer" parent="Control/Sombreado"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -33.0
+offset_right = 133.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContinuarButon" parent="Control/Sombreado/Menu" instance=ExtResource("2_7nxxr")]
+layout_mode = 2
+
+[node name="TerminarBoton" parent="Control/Sombreado/Menu" instance=ExtResource("3_3stu1")]
+layout_mode = 2
+text = "TERMINAR"
+next_scene_path = "res://src/UI/pantalla_final.tscn"
+
+[node name="Salir" parent="Control/Sombreado/Menu" instance=ExtResource("3_lli70")]
+layout_mode = 2

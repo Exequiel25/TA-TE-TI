@@ -3,14 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cewds7dxrich4" path="res://art/bg.png" id="1_tpw67"]
 [ext_resource type="Texture2D" uid="uid://cb3wto76pu5hi" path="res://art/grid.png" id="2_xmwr5"]
 [ext_resource type="PackedScene" uid="uid://cas1yl7eby3l7" path="res://src/Areas/AreaSeleccionable.tscn" id="3_llxfi"]
-[ext_resource type="PackedScene" uid="uid://culltffopxhcb" path="res://src/Areas/focus3x3.tscn" id="4_fc6mj"]
+[ext_resource type="PackedScene" uid="uid://d3o6jac12f2h0" path="res://src/UI/hud.tscn" id="4_qse88"]
 
 [node name="Tablero3x3" type="Node2D"]
+position = Vector2(0, 1)
 metadata/_edit_horizontal_guides_ = [323.0]
 metadata/_edit_vertical_guides_ = [509.0]
 
 [node name="BgCanvasLayer" type="CanvasLayer" parent="."]
-layer = -100
+layer = 0
 
 [node name="fondo" type="TextureRect" parent="BgCanvasLayer"]
 anchors_preset = 15
@@ -20,6 +21,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tpw67")
 expand_mode = 1
+
+[node name="HUD" parent="BgCanvasLayer" instance=ExtResource("4_qse88")]
 
 [node name="grilla" type="TextureRect" parent="BgCanvasLayer"]
 anchors_preset = 8
@@ -72,6 +75,3 @@ pos = 7
 [node name="AreaSeleccionable8" parent="BgCanvasLayer/grilla" instance=ExtResource("3_llxfi")]
 position = Vector2(354.2, 345)
 pos = 8
-
-[node name="Focus3x3" parent="." instance=ExtResource("4_fc6mj")]
-position = Vector2(509, 163)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://63s5yr0cbl0h"]
+
+[ext_resource type="FontFile" uid="uid://brh7bt585vnag" path="res://fonts/SunnyspellsRegular-MV9ze.otf" id="1_7mg7o"]
+[ext_resource type="Script" path="res://src/UI/continuar_boton.gd" id="2_hmcun"]
+
+[node name="CambiarEscenaBoton" type="Button"]
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_7mg7o")
+theme_override_font_sizes/font_size = 64
+text = "JUGAR"
+script = ExtResource("2_hmcun")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

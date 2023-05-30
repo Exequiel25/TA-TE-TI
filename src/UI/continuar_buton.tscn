@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2r0xf3ny82uu"]
+
+[ext_resource type="FontFile" uid="uid://brh7bt585vnag" path="res://fonts/SunnyspellsRegular-MV9ze.otf" id="1_aexlu"]
+[ext_resource type="Script" path="res://src/UI/continuar_buton.gd" id="2_ikhvf"]
+
+[node name="ContinuarButon" type="Button"]
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_aexlu")
+theme_override_font_sizes/font_size = 64
+text = "CONTINUAR"
+script = ExtResource("2_ikhvf")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

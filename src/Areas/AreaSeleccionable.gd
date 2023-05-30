@@ -23,7 +23,7 @@ func _on_mouse_exited():
 	$sombra.hide()
 
 func set_texture():
-	if (GameData.turn):
+	if (GameData3x3.turn):
 		$x_o.texture = x
 		$sombra.texture = x_sombra
 	else:
@@ -36,5 +36,5 @@ func _on_input_event(_viewport:Node, event:InputEvent, _shape_idx:int):
 			selected = true
 			$sombra.hide()
 			$x_o.show()
-			GameData.play(pos)
+			GameData3x3.play(pos)
 			return true

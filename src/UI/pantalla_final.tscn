@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfo3eaddhn1dx"]
+
+[ext_resource type="Texture2D" uid="uid://cewds7dxrich4" path="res://art/bg.png" id="1_er4uh"]
+[ext_resource type="PackedScene" uid="uid://salp2t7i40n5" path="res://src/UI/titulo.tscn" id="2_qurmt"]
+[ext_resource type="FontFile" uid="uid://brh7bt585vnag" path="res://fonts/SunnyspellsRegular-MV9ze.otf" id="3_2q4ee"]
+[ext_resource type="PackedScene" uid="uid://dryeddiabmtlg" path="res://src/UI/cambiar_escena_boton.tscn" id="3_cjqhw"]
+[ext_resource type="PackedScene" path="res://src/UI/salir_boton.tscn" id="4_qjpht"]
+[ext_resource type="PackedScene" uid="uid://63s5yr0cbl0h" path="res://src/UI/continuar_boton.tscn" id="4_uoefx"]
+
+[node name="PantallaFinal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_vertical_guides_ = [511.0]
+
+[node name="fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_er4uh")
+expand_mode = 1
+
+[node name="Titulo" parent="." instance=ExtResource("2_qurmt")]
+layout_mode = 1
+offset_left = -30.0
+offset_top = 61.0
+offset_right = 30.0
+offset_bottom = 87.0
+text = "%s GANA"
+
+[node name="Puntaje" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -148.0
+offset_right = 127.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_2q4ee")
+theme_override_font_sizes/font_size = 40
+text = "X ganó %s rondas
+O ganó %s rondas"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 36.5
+offset_right = 133.0
+offset_bottom = 224.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RevanchaBoton" parent="Menu" instance=ExtResource("4_uoefx")]
+layout_mode = 2
+text = "REVANCHA"
+
+[node name="IrMenuPpal" parent="Menu" instance=ExtResource("3_cjqhw")]
+layout_mode = 2
+text = "MENU"
+next_scene_path = "res://src/UI/pantalla_ppal.tscn"
+
+[node name="Salir" parent="Menu" instance=ExtResource("4_qjpht")]
+layout_mode = 2

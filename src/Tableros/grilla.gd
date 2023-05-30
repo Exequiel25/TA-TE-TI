@@ -4,20 +4,20 @@ var children = get_children()
 
 func _ready():
 	for child in children:
-		if (GameData.turn):
-			child.x_o.texture = GameData.x
-			child.sombra.texture = GameData.x_sombra
+		if (GameData3x3.turn):
+			child.x_o.texture = GameData3x3.x
+			child.sombra.texture = GameData3x3.x_sombra
 		else:
-			child.x_o.texture = GameData.o
-			child.sombra.texture = GameData.o_sombra
-		GameData.turn = not GameData.turn
+			child.x_o.texture = GameData3x3.o
+			child.sombra.texture = GameData3x3.o_sombra
+		GameData3x3.turn = not GameData3x3.turn
 		
 func _on_area_clicked():
 	for child in children:
-		if (GameData.turn):
-			child.x_o.texture = GameData.x
-			child.sombra.texture = GameData.x_sombra
+		if (GameData3x3.turn):
+			child.x_o.texture = GameData3x3.x
+			child.sombra.texture = GameData3x3.x_sombra
 		else:
-			child.x_o.texture = GameData.o
-			child.sombra.texture = GameData.o_sombra
-		GameData.turn = not GameData.turn
+			child.x_o.texture = GameData3x3.o
+			child.sombra.texture = GameData3x3.o_sombra
+		GameData3x3.turn = not GameData3x3.turn
